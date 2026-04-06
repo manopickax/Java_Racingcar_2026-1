@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public class CarCreator {
-    public static List<Car> createCars() {
+    public static List<Raceable> createCars() {
         System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
         String inputName = Console.readLine();
         String[] names = inputName.split(",");
@@ -16,7 +16,7 @@ public class CarCreator {
             throw new IllegalArgumentException("중복된 값 입니다.");
         }
 
-        List<Car> cars = new ArrayList<>();
+        List<Raceable> cars = new ArrayList<>();
         for (String name : names) {
             cars.add(new Car(name));
         }

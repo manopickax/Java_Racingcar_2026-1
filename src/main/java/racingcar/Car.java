@@ -1,6 +1,6 @@
 package racingcar;
 
-public class Car {
+public class Car implements Raceable{
     private final String name;
     private int distance = 0;
     public Car (String name) {
@@ -18,10 +18,6 @@ public class Car {
         if (randomNumber >= 4) {
             distance ++;
         }
-    }
-
-    public void printStatus() {
-        System.out.println(name + " : " + "-".repeat(distance));
     }
 
     public int getDistance() {
